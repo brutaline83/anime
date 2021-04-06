@@ -14,13 +14,11 @@
 		
 		<script>
 			var xmlFile = 'https://raw.githubusercontent.com/olayenca/externals/master/XMLParse.xml';
-			var file = "https://github.com/brutaline83/anime/raw/main/test.xml";
+			var file = "https://raw.githubusercontent.com/brutaline83/anime/main/test.xml";
 			function loadDoc() {
 			  var xhttp = new XMLHttpRequest();
 
 			  xhttp.open("GET", file, true);
-			  xhttp.setRequestHeader('Access-Control-Allow-Headers', '*');
-			  xhttp.setRequestHeader('Access-Control-Allow-Origin', '*');
 			  xhttp.send();
 			  xhttp.onreadystatechange = function() {
 				  xmlFunction(this.response);
@@ -41,7 +39,7 @@
 								</article>*/
 			  for (var elem of x) {
 				var titles = elem.getElementsByTagName("TITLE")[0].childNodes[0].nodeValue;
-				var imgs  = 'C:\\Users\\Lucas\\Documents\\manga\\anime\\images\\'+elem.getElementsByTagName("IMG")[0].childNodes[0].nodeValue;
+				var imgs  = 'images\\'+elem.getElementsByTagName("IMG")[0].childNodes[0].nodeValue;
 				var links = elem.getElementsByTagName("LINK")[0].childNodes[0].nodeValue;
 
 				table += "<article class='item'>";
