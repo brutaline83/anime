@@ -19,6 +19,7 @@
 			  var xhttp = new XMLHttpRequest();
 
 			  xhttp.open("GET", file, true);
+			  xhttp.setRequestHeader('Access-Control-Allow-Headers', '*');
 			  xhttp.setRequestHeader('Access-Control-Allow-Origin', '*');
 			  xhttp.send();
 			  xhttp.onreadystatechange = function() {
