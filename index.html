@@ -11,7 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<?php header('Access-Control-Allow-Origin: *'); ?>
+		
 		<script>
 			var xmlFile = 'https://raw.githubusercontent.com/olayenca/externals/master/XMLParse.xml';
 			var file = "https://github.com/brutaline83/anime/raw/main/test.xml";
@@ -19,6 +19,7 @@
 			  var xhttp = new XMLHttpRequest();
 
 			  xhttp.open("GET", file, true);
+			  xhttp.setRequestHeader('Access-Control-Allow-Origin', '*');
 			  xhttp.send();
 			  xhttp.onreadystatechange = function() {
 				  xmlFunction(this.response);
